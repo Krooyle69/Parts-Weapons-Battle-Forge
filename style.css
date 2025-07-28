@@ -372,3 +372,163 @@ footer .about-link:hover {
 #modal-buy-btn:hover {
   background: #00b8cc;
 }
+
+/* 📱 Адаптация под мобильные и планшеты */
+@media screen and (max-width: 1024px) {
+  body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 95%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  h1.game-title {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .resource-panel,
+  .shop-panel,
+  .upgrade-panel,
+  .stats-panel {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .mine {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  button {
+    width: 90%;
+    max-width: 300px;
+    font-size: 16px;
+  }
+
+  .tab-content {
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .tab-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tab-buttons button {
+    margin: 5px;
+    padding: 8px 12px;
+    font-size: 15px;
+  }
+
+  .floating-text {
+    font-size: 16px;
+  }
+}
+
+/* 🧱 Дополнительно: экстремально узкие экраны */
+@media screen and (max-width: 480px) {
+  h1.game-title {
+    font-size: 22px;
+  }
+
+  .mine {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .tab-content {
+    font-size: 14px;
+  }
+}
+
+/* 📱📦 Специально для iPhone (iOS Safari) */
+@media screen and (max-device-width: 812px) and (orientation: portrait) {
+  body {
+    font-size: 16px; /* iOS занижает шрифт, этот фикс помогает */
+    -webkit-text-size-adjust: 100%;
+    background-color: #0a0a0a;
+  }
+
+  html, body {
+    height: 100%;
+    overflow-x: hidden;
+    overscroll-behavior: none;
+  }
+
+  .container {
+    padding: 12px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .tab-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  button {
+    -webkit-tap-highlight-color: transparent; /* Убирает синий фон при тапе */
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .mine {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 16px !important; /* Чтобы не вызывалась зум-клавиатура */
+  }
+
+  .tab-content {
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  /* Защита от "прыжков" UI при появлении клавиатуры */
+  @supports (-webkit-touch-callout: none) {
+    .container {
+      min-height: -webkit-fill-available;
+    }
+  }
+}
+
+/*окно о 1000 рес*/
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  animation: fadeout 3s forwards;
+  z-index: 999;
+}
+
+@keyframes fadeout {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; display: none; }
+}

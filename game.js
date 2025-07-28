@@ -279,4 +279,39 @@ function init() {
 
 init();
 
+// бонус за вход в игру по дате
 
+function giveDailyBonus() {
+  const lastBonusDate = localStorage.getItem('lastBonusDate');
+  const today = new Date().toLocaleDateString();
+
+  if (lastBonusDate !== today) {
+    totalResources += 500;
+    updateResourceUI();
+    localStorage.setItem('lastBonusDate', today);
+    alert("🎁 Вы получили ежедневный бонус: +500 ресурсов!");
+  }
+}
+
+// Вызывается при старте игры
+window.addEventListener('load', giveDailyBonus);
+
+
+let achievementsShown = {};
+
+function checkAchievements() {
+  if (totalResources >= 1000 && !achievementsShown['1000']) {
+    showAchievement("🏆 Достижение: 1000 ресурсов!");
+    achievementsShown['1000'] = true;
+  }
+  // Добавляй другие здесь
+}
+
+function showAchievement(text) {
+  const toast = document.getElementById("achievement-toast");
+  toast.textContent = text;
+  toast.style.display = "block";
+  setTimeout(() => {
+    toast.style.display = "none";
+  }, 3000);
+}

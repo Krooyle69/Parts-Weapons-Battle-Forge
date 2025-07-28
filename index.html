@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parts & Weapons — Battle Forge</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="img/favicon.png" type="image/x-icon" />
+</head>
+<body>
+  <div class="top-panel">
+    <h1>Боевой Рейтинг: <span id="bo-count">0</span></h1>
+    <div class="parts-panel" id="parts-panel"></div>
+  </div>
+
+  <div class="buttons-row">
+    <button id="gather-btn">Собрать запчасть</button>
+    <button id="auto-gather-btn" title="Купить авто-сбор (1000 всех ресурсов)">Авто-сбор</button>
+  </div>
+
+  <div class="weapon-list" id="weapon-list"></div>
+  
+<!-- Модальное окно авто-сбора -->
+<div id="auto-gather-modal" class="modal hidden">
+  <div class="modal-content">
+    <h2>Покупка авто-сбора</h2>
+    <p>Чтобы приобрести авто-сбор запчастей, вам нужно:</p>
+    <ul>
+      <li>1000 нано-кристаллов</li>
+      <li>1000 плазмо-проводов</li>
+      <li>1000 кварцевых резонаторов</li>
+      <li>1000 термо-спиралей</li>
+      <li>1000 энерго-матриц</li>
+    </ul>
+    <div class="modal-buttons">
+      <button id="modal-close-btn">Закрыть</button>
+      <button id="modal-buy-btn">Купить</button>
+    </div>
+  </div>
+</div>
+
+  <footer>
+    <div id="date-time"></div>
+    <a href="about.html" target="_blank" class="about-link">Об игре</a>
+    <div class="company-info">© 2025 ChKroP</div>
+  </footer>
+
+  <script src="game.js"></script>
+</body>
+</html>

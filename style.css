@@ -372,3 +372,22 @@ footer .about-link:hover {
 #modal-buy-btn:hover {
   background: #00b8cc;
 }
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .game-screen {
+    margin: 0 auto !important;
+    width: 100% !important;
+  }
+}

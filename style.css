@@ -399,3 +399,29 @@ footer .about-link:hover {
     text-align: center;
   }
 }
+
+#bonus-popup {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 255, 0, 0.85);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 9999;
+}
+
+#bonus-popup.bonus-visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-20px);
+}
+
+.bonus-hidden {
+  opacity: 0;
+}

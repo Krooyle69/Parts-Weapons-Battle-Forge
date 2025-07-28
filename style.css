@@ -373,21 +373,29 @@ footer .about-link:hover {
   background: #00b8cc;
 }
 @media (max-width: 768px) {
-  body {
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px;
+    background-color: #000; /* если нужен фон */
+    overflow-x: hidden;
   }
 
   .container {
     width: 100%;
-    max-width: 480px;
+    max-width: 420px;
     margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
   }
 
   .game-screen {
-    margin: 0 auto !important;
     width: 100% !important;
+    margin: 0 auto !important;
+    text-align: center;
   }
 }

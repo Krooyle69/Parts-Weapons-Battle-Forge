@@ -372,106 +372,108 @@ footer .about-link:hover {
 #modal-buy-btn:hover {
   background: #00b8cc;
 }
-/* Адаптивность для мобильных устройств */
+/* 📱 Адаптация интерфейса под мобильные устройства */
 @media (max-width: 480px) {
-  /* Убираем фиксированную ширину модальных окон и уменьшаем паддинги */
   .modal-content {
-    width: 90vw !important;
-    padding: 20px 20px !important;
-    font-size: 14px !important;
+    width: 92vw;
+    padding: 16px;
+    font-size: 15px;
+    box-sizing: border-box;
   }
 
-  /* Заголовки чуть меньше */
   .modal-content h2 {
-    font-size: 20px !important;
+    font-size: 18px;
+    margin-bottom: 12px;
   }
 
-  /* Поля ввода */
   .modal-content input[type="text"],
   .modal-content input[type="password"] {
-    font-size: 14px !important;
-    padding: 10px 12px !important;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
   }
 
-  /* Кнопки делают чуть уже и чуть меньше */
   .modal-content button {
-    font-size: 16px !important;
-    padding: 12px 0 !important;
+    font-size: 15px;
+    padding: 12px;
+    width: 100%;
   }
 
-  /* Уменьшаем отступы у текста под кнопками */
   .modal-content p {
-    font-size: 12px !important;
-    margin-top: 12px !important;
+    font-size: 13px;
+    margin-top: 10px;
+    text-align: center;
   }
 
-  /* Верхняя панель адаптируется */
   .top-panel {
-    padding: 15px 10px !important;
+    padding: 12px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .top-panel h1 {
-    font-size: 24px !important;
+    font-size: 22px;
   }
 
-  /* Кнопки "Собрать" и "Авто-сбор" по ширине */
   .buttons-row {
-    flex-direction: column !important;
-    gap: 12px !important;
-    margin-bottom: 25px !important;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
   }
 
-  #gather-btn, #auto-gather-btn {
-    width: 100% !important;
-    max-width: none !important;
-    font-size: 16px !important;
+  #gather-btn,
+  #auto-gather-btn {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
   }
 
-  /* Список оружия вертикальный и чуть плотнее */
   .weapon-list {
-    gap: 12px !important;
-    padding-bottom: 30px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 
   .weapon {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    padding: 15px !important;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 12px;
   }
 
   .weapon img {
-    width: 60px !important;
-    height: 60px !important;
-    margin-bottom: 10px !important;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 8px;
   }
 
   .weapon-info {
-    gap: 6px !important;
+    gap: 4px;
   }
 
   .weapon-title {
-    font-size: 18px !important;
+    font-size: 16px;
   }
 
   .weapon-stats {
-    font-size: 14px !important;
+    font-size: 13px;
   }
 
-  /* Подвал с меньшим шрифтом */
   footer {
-    font-size: 12px !important;
-    padding: 12px 15px !important;
+    font-size: 12px;
+    padding: 10px;
+    text-align: center;
   }
 
-  /* Кнопка рейтинга (если есть) -- чуть меньше и не так агрессивно светится */
   #rating-button {
-    width: 48px !important;
-    height: 48px !important;
-    top: 12px !important;
-    right: 12px !important;
+    width: 44px;
+    height: 44px;
+    top: 10px;
+    right: 10px;
   }
 
   #rating-button img {
-    filter: drop-shadow(0 0 4px #00ffff) !important;
+    filter: drop-shadow(0 0 3px #00ffff);
   }
 }

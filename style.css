@@ -425,3 +425,21 @@ footer .about-link:hover {
 .bonus-hidden {
   opacity: 0;
 }
+
+.bonus-info {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(0, 255, 204, 0.05);
+  border-left: 4px solid #00ffcc;
+  color: #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.bonus-info h3 {
+  margin-top: 0;
+  color: #00ffcc;
+  font-size: 20px;
+  margin-bottom: 10px;
+}

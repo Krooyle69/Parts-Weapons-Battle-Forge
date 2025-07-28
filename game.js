@@ -279,20 +279,4 @@ function init() {
 
 init();
 
-function showBonusPopup() {
-  const bonusPopup = document.getElementById('bonus-popup');
-  bonusPopup.classList.add('bonus-visible');
-  setTimeout(() => {
-    bonusPopup.classList.remove('bonus-visible');
-  }, 2000);
-}
 
-// Добавляем ресурсы игроку каждые 30 секунд
-setInterval(() => {
-  // Предположим, основной ресурс -- это уголь
-  if (typeof resources !== 'undefined' && resources['уголь'] !== undefined) {
-    resources['уголь'] += 5;
-    updateUI(); // Функция перерисовки интерфейса, если у тебя есть
-    showBonusPopup();
-  }
-}, 30000);
